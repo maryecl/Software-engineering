@@ -1,0 +1,140 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+  p1{color:black;font-weight:normal;font-family:"Courier New", Courier}
+  h1{color:#045FB4;font-family:"Lucida Console", Monaco, monospace;font-weight:bold; font-size:60px}
+  h3{color:#045FB4;font-family:"Courier New", Courier, monospace; font-weight: bolder}
+  h5{color:black;font-family:"Courier New", Courier, monospace; font-weight: bold;}
+  h4{color:black;font-family:"Lucida Console", Monaco, monospace;font-weight: 800;}
+
+  title{color:#C0C0C0;font-weight:bold;font-family:"Courier New",Courier,monospace}
+
+  li{
+    list-style-type: none;
+  }
+  ol{
+    list-style-type:decimal;
+  }
+  </style>
+
+</style>
+</head>
+
+<body>
+<h1>Domain Requirements</h1>
+<h4>Glossary</h4>
+<p1>
+<ul>
+  <li>Editorial: compañia que utilizar el software para gestionar sus servicios.</li>
+  <li>Cliente:quien interactua con la pagina.</li>
+  <li>Ourcode:nosotros como desarrolladores.</li>
+  <li>Editores: clasifica los trabajos y escoger donde deben de ser incluidos dentro de las colecciones de la editorial</li>
+  <li>Layout: presentacion fisica de los trabajos, covers, diseño, logotipo.</li>
+  <li>Layout designers: estos diseñadores se encargan de pasar los trabajos a un formato estandard de la editorial.</li>
+  <li>Editorial collection:</li>
+  <li>Watermark:consiste en la imagen y logotipo colocado por encima de la version online, para incentivar a los clientes a comprar los trabajos.</li>
+  <li>Cover page: es la primera pagina del libro, la tapa, las cuales tienen que tener el mismo formato.</li>
+  <li>Autor: escribe y sube sus trabajos a la pagina web.</li>
+  <li>Reviews: comentarios o reseñas que pueden dejar los clientes sobre un cierto titulo o coleccion.</li>
+  <li>Online payment service: servicio contratado para el pago y donaciones en la pagina web. </li>
+  <li>Messenger services: servicio de mensajeria contratado para proveer de sistema de notificaciones, publicidad y recomendaciones</li>
+  <li>Donations: la editorial incentiva las donaciones a los autores de esos trabajos que estan disponibles para lectura online, sin que la editoral tenga comisiones.</li>
+  <li>Notifications: comunicados via email, de recibos de ventas, actualizaciones de sagas, recomendaciones, informacion de autores suscritos...etc</li>
+  <li>Unlisting: accion de remover del catalogo alguno de los libros disponibles. Esta accion la pueden llevar a cabo tanto los autores como los editores.</li>
+  <li>PayPal: Servicio externo para procesos de compra con tarjetas bancarias.</li>
+  <li>Stakeholder: alguien relevante en el sistema, sus acciones y decisiones son importantes para el comportamiento general.</li>
+  <li>Use case: servicio ofrecido por el sistema.</li>
+  <li>Actor: una persona/sistema externo que inicializa un use case.</li>
+  <li>Changes: cambios posibles a realizar en el diseño.</li>
+  <li>Libro: entidad libro, define titulo, formato, topico, coleccion, cover. </li>
+  <li>Usuario: entidad que tiene un nombre, una actividad dentro de la editorial.</li>
+  <li>Cesta: una cesta puede contener N libros.</li>
+  <li>Servicio: entidad en la que se definen los servicios y caracteristicas de estos.</li>
+</ul>
+
+<h4>Static Analysis Diagram</h4>
+  <img src="uml4.jpg" style="width:1200px;height:600px" align="center">
+
+<h4>Domain requirements</h4>
+<p1>
+  <ul>
+    <li>Processes:</li>
+    <li>- El cliente puede escoger que version desea del libro.</li>
+    <li>- El autor puede escoger el formato y pedir un layout.</li>
+    <li>- El cliente puede realizar una compra y optar porque servicio de pago le es mas comodo.</li>
+    <li>- El cliente puede usar el buscador o la clasificacion por coleccion para buscar un libro.</li>
+    <li>- El cliente puede escoger de que libros/colecciones recibe notificacion.</li>
+    <li>- El cliente puede dejar reviews o valoraciones de los libros que lee.</li>
+    <li>- El cliente puede hacer o no donaciones.</li>
+    <li>- El editor puede quitar la disponibilidad de un libro. (unlist)</li>
+    <br>
+    <li>Changes:</li>
+    <li>- Definir que se notifica al usuario y que no.</li>
+    <li>- Que un autor sea capaz de  participar en la clasificacion y diseño del libro.</li>
+    <li>- Que no haya un minimo de pago.</li>
+    <br>
+    <li>Restrictions:</li>
+    <li>- Solo puede validar un libro un editor.</li>
+    <li>- Los topicos y colecciones son seleccionadas especificamente por el editor.</li>
+    <li>- Hay un maximo de items que se pueden añadir a la cesta?</li>
+    <li>- Hay un precio minimo por compra o donacion, o precio maximo?</li>
+    <li>- Solo se puede acceder a los servicios web de la editorial teniendo una cuanta.</li>
+    <li>- Se puede editar una cover una vez ya ha sido seleccionada por un diseñador.</li>
+    <li>- Se reciben notificaciones de respuestas a reviews?</li>
+    <li>- Puede el autor opinar en la eleccion de la clasificacion y cover del libro?</li>
+    <br>
+    <li>Formulas:</li>
+    <li>- Formula para calcular el precio de los libros.</li>
+    <li>- Formula para calcular el precio de libro y envio.</li>
+    <li>- Formula para calcular la media de reviews y definir la popularidad del libro.</li>
+  </ul>
+</p1>
+
+
+<br>
+<br>
+<h4>State Diagram</h4>
+    <img src="uml5.jpg" style="width:800px;height:900px" align="center">
+
+<br>
+<br>
+<h4>Activity diagram: Purchasing a book.</h4>
+  <img src="uml6.jpg" style="width:800px;height:1200px" align="center">
+
+<br>
+<br>
+<h4>Activity diagram: Publishing a book.</h4>
+  <img src="uml7.jpg" style="width:800px;height:1200px" align="center">
+
+  <h4>Non-functional requirements</h4>
+  <p1>
+    <ul>
+      <h3>Product</h3>
+      <h5>Usabilidad</h5>
+      <li>Menú debe estar ubicado en la izquierda. (Estándar de la mayoría de páginas web)</li>
+      <h5>Eficiencia</h5>
+      <li>Que el proceso de compra no dure más de x tiempo.</li>
+      <li>Que el tiempo de respuesta de una búsqueda no sea muy largo.</li>
+      <li>La página se debe refrescar automáticamente cada cierto tiempo para actualizar información.</li>
+      <h5>Robustness</h5>
+      <li>Cuantas veces se puede realizar un login antes de bloquear la cuenta</li>
+      <li>Cuanto tiempo se puede durar realizando la compra.</li>
+
+      <h3>Organizational</h3>
+      <li>Solo se acepta un formato específico de libros.</li>
+      <li>Los clientes solo podrán realizar review estando registrados.</li>
+      <li>Los autores y editores no pueden manipular libros disponibles. (unlisting)</li>
+      <li>Solo se pueden realizar donaciones estando registrado.</li>
+      <li>Un libro solo se puede subir una vez ha sido validado por el editor.</li>
+
+      <h3>External</h3>
+      <li>Posibilidad de acceder desde smartphone.</li>
+      <li>La posibilidad de responder review de otros usuarios.</li>
+      <li>Idiomas oficiales y co-oficiales donde tenga actividad la empresa.</li>
+    </ul>
+  </p1>
+</body>
+</html>

@@ -1,0 +1,29 @@
+- Add Author
+
+Qt:connect(&codeauthorbutton, signal(click()), (&view, slot(codeauthorwindow()));
+Qt:connect(&textboxauthor,signal(addName()),(&view,slot(insertName())));
+Qt:connect(&multiplebutton,signal(clickContracted()),(&view,slot(authorContracted())));
+Qt:connect(&addauthorbutton , signal(addAuthor()), (&view, slot(showAuthor())));
+
+- Add Work
+
+Qt:connect(&newworkbutton, signal(click()),(&view, slot(addworkwindow())));
+Qt:connect(&searchbutton,signal(addName()),(&view,slot(insertName())));
+Qt:connect(&textbutton,signal(addText()),(&view, slot(insertName())));
+Qt:connect(&authortext, signal(addAuthor()),(&view, slot(insertAuthor())));
+Qt:connect(&topicchoice, signal(click()),(&view,slot(insertTopic())));
+Qt:connect(&descriptiontext, signal(addDescription()),(&view, slot(insertDescription())));
+Qt:connect(&addworkbutton,signal(addWork()),(&add, slot(insertWork())));
+Qt:connect(&exitbutton, signal(exit()),(&window, slot(quit())));
+
+- Topic:
+
+Qt:connect(&newtopbutton, signal(addTopic()),(&windowtopic, slot(insertTopic())));
+Qt:connect(&textbutton, signal(addTopicName()),(&add,slot(insertName())));
+Qt:connect(&addtopbutton, signal(click()),(&window, (addTopic())));
+
+- Associeate topic with work
+
+Qt:connect(&topicnamebutton, signal(searchTopic()), (&add, slot(listTopic())));
+Qt:connect(&addworkbutton, signal(chooseWork()),(&add, slot(addWorkToList())));
+Qt:connect(&addtopicbutton, signal(addTopic()),(&window, slot(listWorks())));

@@ -1,0 +1,21 @@
+Lab 1:
+- Falta fichero enclosure.hxx y se han subido binarios al repositorio
+- El ejercicio de recintos no se ha hecho
+Lab 2:
+- Faltan REFACTOR commits y ItemTest no hace referencia a ninguna clase, es solo un ejemplo.
+- Se ha subido el compilado AllTests al repositorio
+- Los test no se deberían modificar
+- Variables primitivas como int, no hace falta pasarlas por referencia
+- Hay warnings que se deben solucionar
+- Hay memory leaks que se deben solucionar
+Lab 3:
+- Faltan REFACTOR commits
+- Se han subido archivos compilados al repositorio
+- Exceptions.hxx debería estar bajo src/
+- Por lo demás práctica perfecta
+Lab 4:
+- MeltingPotOnline tambien debería gestionar Collections
+- Se han subido archivos compilados al repositorio
+- Exceptions.hxx debería colgar de src/ no de src/unitTests/
+- No hace falta un atributo _works en MeltingPotOnline
+- Hay un warning que se debería solucionar

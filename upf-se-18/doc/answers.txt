@@ -1,0 +1,65 @@
+Q1 - 
+
+Aparece en color rojo marcado como que no está registrado todaví­a. 
+
+Q2 -
+
+Ahora aparece en color verde como nuevo fichero, y marcado preparado para realizar el commit.  
+
+
+Q3 -
+
+Marca los cambios añadidos en el fichero a diferencia de la versión anterior, las lineas añadidas también salen.
+
+Q4 -
+
+El mensaje para el commit podria ser "README.md added".
+
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Estamos 2 commits avanzados a diferencia del repositorio. Se deberÃ­a realizar un push para estar sincronizados.
+
+Q5 - 
+
+Aparecen 4 commits, erróneamente cramos un README.md desde la web de bitbucket y lo eliminamos desde la misma web de ahí­ los 2 commits extras. Al añadir el README.md desde la terminal los primeros digitos que identifican el commit correcto son b57d51b.
+
+
+Q6 - 
+
+Nos indica las diferencias respecto al último commit. Entendemos que trabajamos a nivel local respecto a estos cambios.
+
+Editamos el fichero añadiendo una linea más. Al ejecutar el git checkout HEAD README.md verificamos que la linea añadida ha desaparecido, volviendo al estado del fichero del último commit.
+
+Q7 -
+
+Al hacer el reset, el fichero README.md pasa a estar fuera del staging area. De alguna manera se anula el add, git detecta que ha sido editado pero se ha suprimido el add. El fichero queda intacto.
+
+Q8 -
+
+Al ejecutar git branch documents. Tenemos dos ramas ahora, una llamada master con un *, representa la rama en la cual estamos ahora. Y otra llamada documents que es la que acabamos de crear.
+
+Q9 -
+
+Si realizamos cat README.md y visualizamos el contenido de README.md en la rama documents, vemos que está la frase que acabamos de escribir "We are in the documents branch". Pero si realizamos un checkout y nos vamos a la rama de master, el contenido es diferente.
+
+Q10 - 
+
+Al realizar el merge desde la rama master, nos devuelve el siguiente warning:
+
+Auto-merging doc/answers.txt
+CONFLICT (add/add): Merge conflict in doc/answers.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+Si miramos el fichero answers.txt, nos aparece como divido. Entre el contenido que hay en answers master, y el contenido que hay en answers documents. Editamos el fichero como debería ser conveniente, y realizamos un commit solucionando el fichero.
+
+
+Q11 - 
+
+Estamos en la rama master. Tenemos una rama, master.
+
+
+
+
+

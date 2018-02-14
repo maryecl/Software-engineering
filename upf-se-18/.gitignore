@@ -1,0 +1,4 @@
+*.o
+*.dSYM
+*.dblite
+*.DS_Store

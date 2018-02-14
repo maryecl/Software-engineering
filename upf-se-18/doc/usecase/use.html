@@ -1,0 +1,216 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+h1{color:#045FB4;font-family:"Lucida Console", Monaco, monospace;font-weight:bold}
+h3{color:#045FB4;font-family:"Courier New", Courier, monospace; font-weight: bolder}
+h5{color:black;font-family:"Courier New", Courier, monospace; font-weight: bold;}
+h4{color:black;font-weight:bold;font-family:"Courier New", Courier, monospace}
+title{color:#C0C0C0;font-weight:bold;font-family:"Courier New",Courier,monospace}
+p1{color:black;font-weight:normal;font-family:"Courier New", Courier}
+
+li{
+  list-style-type: none;
+}
+ol{
+  list-style-type:decimal;
+}
+</style>
+</head>
+
+<body>
+<h1>Use cases</h1>
+<h4>USE CASE: Purchase book</h4>
+<p1>
+    <ul>
+      <li><span style ="color:778899">CONTEXTO:</span>Un usuario/cliente quiere realizar la compra de un libro.</li>
+      <li><span style ="color:778899">ACTORES PRIMARIOS:</span> comprador(usuario).</li>
+      <li><span style ="color:778899">ACTORES SECUNDARIOS:</span> ----</li>
+      <br />
+      <li><span style ="color:778899">PRECONDICIONES:</span></li>
+      <li>El usuario debe poder acceder a la web de la editorial.</li>
+      <li>El libro tiene que estar disponible en la editorial.</li>
+      <br>
+      <li><span style ="color:778899">POSTCONDICIONES EXITOSAS:</span> el usuario puede acceder a su cuenta.</li>
+      <br>
+      <li><span style ="color:778899">POSTOCONDIONES NO EXITOSAS:</span></li>
+      <li>Que el usuario no tenga cuenta o no pueda acceder a esta.</li>
+      <li>Que el libro no este disponible.</li>
+
+      <br>
+      <li><span style ="color:778899">BASIC FLOW:</span></li>
+          <li>1.Usuario escoge un libro.</li>
+          <li>2.Usuario accede a la wed de la editorial.</li>
+          <li>3.Usuario decide buscar libro.</li>
+          <li>4.Usuario pone el libro en el buscador.</li>
+          <li>5.Usuario accede al libro.</li>
+          <li>6.Usuario añade libro a la cesta.</li>
+          <li>7.Usuario se propone a pagar.</li>
+          <li>8.El sistema le pide identificacion.</li>
+          <li>9.El usuario introduce nombre de usuario y contraseña.</li>
+          <li>10.El usuario puede iniciar la compra.</li>
+          <li>11.El usuario escoge metodo de pago.</li>
+          <li>12.El usuario introduce datos bancarios.</li>
+          <li>13.El usuario escoge el metodo de entrega (recoger tienda o enviar).</li>
+          <li>14.El sistema valida la compra</li>
+
+      <br>
+      <li><span style ="color:778899">EXTENSIONES:</span></li>
+          <li>3.a El libro no esta disponible.</li>
+          <li>3.a.1 El usuario decide reservar el libro.</li>
+          <li>3.b El usuario se sale de la web de la editorial </li>
+          <br>
+          <li>4.a Pone el libro en el buscador y no lo encuentra.</li>
+          <li>4.a.1 Vuelves al paso 2 pero esta vez lo busca a partir de la navegacion por colecciones.</li>
+          <br>
+          <li>6.a El usuario no esta registrado como usuario.</li>
+          <li>6.a.1 El usuario se registra para tener una cuenta.</li>
+          <li>6.a.2 Vuelve al paso 5.</li>
+          <br>
+          <li>12.a Los datos de banco del usuario no son correctos.</li>
+          <li>12.a.1 Vuelve al paso 11, para verificar que escoge el metodo correcto.</li>
+          <li>12.b Los datos bancarios estan caducados.</li>
+          <li>12.b.1 No se puede realizar compra, se sale de la web.</li>
+          <br>
+          <li>13.a Los datos de destino del envio no son aceptado, o el servicio no esta disponible.</li>
+          <li>13.a.1 El usuario contacta con la editorial.</li>
+          <br>
+          <li>14.a El sistema no puede validar la compra.</li>
+          <li>14.a.1 Se guarda la cesta para reintentarlo.</li>
+
+
+      <br>
+      <li><span style ="color:778899">STAKEHOLDERS IMPLICADOS:</span>cliente, editor, autor, layout designer, editorial, servicios de autentificacion,
+        servicios de pago, servicios de mensajeria, soporte tecnico, programadores(ourcode).</li>
+
+      <br>
+      <li><span style ="color:778899">ACTORES, CASOS DE USO Y SUS RELACIONES</span></li>
+    <li>En el use case de comprar libro, identificamos un  stakeholders principal. Tenemos el comprador que sería la generalización de un usuario registrado o no registrado. Estos dos son los stakeholders principales en el proceso de comprar un libro. Los servicios de pago serían el principal servicio externo del proceso (Actor). Al realizar la acción "realizar compra" hay dos acciones que se incluyen buscar libro y proceso de pago como parte esencial de la acción. </li>
+        <li>
+        El caso proceso de pago que se incluye en realizar compra, al ser un poco extenso lo hemos separado en otro gráfico. Éste incluye autentificación de usuario, verificar cesta, calculo del precio final, y el proceso de pago. Este último con tarjeta o el servicio PayPal (Ambos son servicios externos).
+        </li>
+      <br>
+      <li><span style ="color:778899">DIAGRAMA</span></li>
+      <br>
+    <img src="uml1.jpg" style="width:500px;height:400px" align="down">
+      <img src="uml2.jpg" style="width:500px;height:400px" align="down">
+
+
+    </ul>
+</p1>
+
+<h4>USE CASE: Validate uploaded work</h4>
+<p1>
+    <ul>
+      <li><span style ="color:778899">CONTEXTO:</span>el editor quiere validar el libro.</li>
+      <li><span style ="color:778899">ACTORES PRIMARIOS:</span> el editor.</li>
+      <li><span style ="color:778899">ACTORES SECUNDARIOS:</span> autor y layout designer.</li>
+      <br>
+      <li><span style ="color:778899">PRECONDICIONES:</span></li>
+        <li>Que el autor pueda acceder a la pagina web.</li>
+        <li>Que el libro se haya subido en el formato correcto.</li>
+        <li>Que el editor pueda acceder a la web de la editorial.</li>
+      <br>
+      <li><span style ="color:778899">POSTCONDICIONES EXITOSAS:</span></li>
+        <li>El autor accede a la web.</li>
+        <li>El autor puede subir el libro.</li>
+        <li>El autor sube el libro en el formato correcto.</li>
+        <li>El editor puede acceder al libro.</li>
+      <br>
+      <li><span style ="color:778899">POSTOCONDIONES NO EXITOSAS:</span></span></li>
+        <li>El autor no puede acceder a la web.</li>
+        <li>El autor no logra subir el libro.</li>
+        <li>El autor sube el libro en el formato incorrecto.</li>
+        <li>El editor no puede acceder al libro.</li>
+      <br>
+      <li><span style ="color:778899">BASIC FLOW:</span></li>
+        <li>1.El autor se decide a subir el libro. </li>
+        <li>2.El autor accede a la web de la editorial.</li>
+        <li>3.El sistema pide la identificacion del usuario.</li>
+        <li>4.El autor introduce id y contraseña.</li>
+        <li>5.El autor rellena informacion del libro.</li>
+        <li>6.El autir define si quiere un layout propio de la editorial.</li>
+        <li>7.El autor define el formato en el que subira el libro.</li>
+        <li>8.El autor sube el libro.</li>
+        <li>9.El editor accede al libro.</li>
+        <li>10.El editor valida el layout y contenido del libro.</li>
+        <li>11.El editor clasifica el libro.</li>
+        <li>12.El editor decide a que coleccion pertenecera el libro.</li>
+        <li>13.El sistema añade cover y numeracionç</li>
+        <li>14.El sistema sube el libro en las tres versiones disponibles para el publico.</li>
+        <li>15.El editor se desconecta.</li>
+      <br>
+      <li><span style ="color:778899">EXTENSIONES</span></li>
+
+        <li>3.a El autor no tiene cuenta de acceso.</li>
+        <li>3.a.1 El autor contacta con la editorial.</li>
+        <br>
+        <li>8.a El autor sube el libro con formato erroneo.</li>
+        <li>8.a.1 El autor borra el o cancela la subida.</li>
+        <li>8.a.2 Vuelve al paso 5.</li>
+        <br>
+        <li>8.b EL autor sube el libro sin especificar que quiere un layout.</li>
+        <li>8.b.1 El autor cancela el libro,</li>
+        <li>8.b.2 Vuelve al paso 5.</li>
+        <li>8.c O contacta al editor para informar que quiere un layout de la editorial.</li>
+        <br>
+        <li>6. El autor define que quiere un layout.</li>
+        <li>6.a.1 El layout designer no puede acceder al libro.</li>
+        <li>6.a.2 El layout designer contacta con la editorial.</li>
+        <br>
+        <li>9.a El editor no puede acceder al libro por lo tanto no lo puede validar ni clasificar. </li>
+        <li>9.a.1 El editor contacta con el autor.</li>
+        <li>9.a.2 El editor se desconecta</li>
+
+      <br>
+      <li><span style ="color:778899">STAKEHOLDERS IMPLICADOS:</span> editor, autor, layout designer, editorial, servicios de autentificacion, servicios de mensajeria
+      , soporte tecnico, programadores(ourcode).</li>
+
+      <br>
+      <li><span style ="color:778899">ACTORES, CASOS DE USO Y SUS RELACIONES</span>En este caso de uso tenemos un actor principal, el editor, que es quien se encarga de llevar a cabo la validacion de los libros, que es el contexto principal del caso de uso.
+      Luego tenemos dos actores secundarios, el autor y el layout designer, estos desempeñan acciones necesarias para la validacion de los trabajos. Estos tres actores requieren de una autentificacion de usuario para poder acceder al sistema y poder
+      desempeñar las acciones deseadas.<br> La accion "autentificacion de usuario", necesita de un agente externo, los servicios de autentificacion.<br>
+      El autor realiza la accion "Subir libro", esta accion tiene acciones afiliadas pero no indispensables, las cuales son "Definir formato" y "Definir si quiere un layout", pese a esto, el mal uso de estas acciones secundarias podria generar problemas para el proceso.
+      <br>El editor realiza la accion principal, "Validar libro", esta accion depende totalmente de si el autor ha realizado la accion "Subir libro", y si el diseñador a terminado el trabajo de la presentacion "Diseñar y escoger layout". La accion "Validar libro" tambien
+      conlleva tres acciones que debe realizar el editor para poder terminar su trabajo, que son "Validar cover", "Clasificar libro" y "Escoger coleccion".<br> El layout designer realiza la accion "Diseñar y escoger layout".</li>
+
+      <br>
+      <li><span style ="color:778899">DIAGRAMA</span></li>
+      <img src="uml3.jpg" style="width:500px;height:400px" align="down">
+
+    </ul>
+</p1>
+
+
+<br>
+<h4>Non-functional requirements</h4>
+<p1>
+  <ul>
+    <h3>Product</h3>
+    <h5>Usabilidad</h5>
+    <li>Menú debe estar ubicado en la izquierda. (Estándar de la mayoría de páginas web)</li>
+    <h5>Eficiencia</h5>
+    <li>Que el proceso de compra no dure más de x tiempo.</li>
+    <li>Que el tiempo de respuesta de una búsqueda no sea muy largo.</li>
+    <li>La página se debe refrescar automáticamente cada cierto tiempo para actualizar información.</li>
+    <h5>Robustness</h5>
+    <li>Cuantas veces se puede realizar un login antes de bloquear la cuenta</li>
+    <li>Cuanto tiempo se puede durar realizando la compra.</li>
+
+    <h3>Organizational</h3>
+    <li>Solo se acepta un formato específico de libros.</li>
+    <li>Los clientes solo podrán realizar review estando registrados.</li>
+    <li>Los autores y editores no pueden manipular libros disponibles. (unlisting)</li>
+    <li>Solo se pueden realizar donaciones estando registrado.</li>
+    <li>Un libro solo se puede subir una vez ha sido validado por el editor.</li>
+
+    <h3>External</h3>
+    <li>Posibilidad de acceder desde smartphone.</li>
+    <li>La posibilidad de responder review de otros usuarios.</li>
+    <li>Idiomas oficiales y co-oficiales donde tenga actividad la empresa.</li>
+  </ul>
+</p1>
+
+</body>
+</html>

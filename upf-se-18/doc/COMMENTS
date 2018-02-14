@@ -1,0 +1,50 @@
+Seminar 1:
+- En el ejercicio de clase falta algun stakeholder importante (MeltingPot?) y se debería haber puesto algun concepto más en el glosario.
+- Ejercicio final correcto solo que el archivo debería ser index.html en la carpeta doc/
+
+Seminar 2:
+- Debería haber un index.html que cuelgue de doc/
+- "Purchase book": faltan support actors (mínimo paypal); en el diagrama "tarjeta" y "paypal" no deberían incluir a "pagar", por otro lado faltan encontrar extends.
+- "Validate uploaded work": el actor principal siempre es el que arranca el use case; en el diagrama, "definir formato" y "definir layout" deberían ser includes para el use case "subir libro" (falta acabar de entender el significado y uso de "include" y "extends")
+- El ejercicio 3, es independiente de los diagramas. Consiste en un listado de los use cases del proyecto y los actores implicados para cada uno.
+
+Seminar 3:
+- Debería haber un index.html que cuelgue de doc/
+- En los requerimientos de texto se proponen soluciones y explicaciones, no preguntas (eso va a puntos oscuros)
+
+Seminar 4:
+- El diagrama de estados de clase es totalmente incorrecto (habéis hecho todo diagramas de actividad)
+- index.html debería colgar de doc/
+- los seminarios estan mal organizados
+- En el final, falta la clase sobre la que trata el state-diagram
+- En los activity diagrams se han puesto varios nodos que no son actividades, ej. "Sugerencias", "Browser"? (falta poner las preguntas como corresponde)
+- Los requerimientos no funcionales deberían de ser mas precisos en algun punto como "x tiempo"
+
+Seminar 5:
+- En el ejercicio de clase faltan los atributos del Facade, y en general deberían ser list de punteros
+- Debería haber un fichero index.html que cuelgue de doc/
+- Según vuestro diagrama, Work debería gestionar Style
+- Los atributos se expresan al revés: [nombre]:[tipo]; y para las listas sería el siguiente ej. works:list< Work* >
+- Faltan métodos buy, search,  notify, publish en el Facade. Todos los métodos deben ser accesibles desde esta clase
+
+Seminar 6:
+- In the final diagram uploaded, I can't see the realtionships marked between the libraries and AdapterOffice and AdapterOO classes
+- Also the cardinality between converter and adapter is missing
+- ConvertFromODTtoPDF and COnvertFromODTtoHTML methods should be inside the AdapterOffice and the AdapterOO classes. These methods should use the library files to do the conversion. 
+
+Seminar 7:
+- Some relationships are redundant (eg: client with collection class? client with topic class?)
+- Cardinality between observer and the subject? 
+- The protal should show upcoming news items too. This requirement is not designed.
+
+Seminar 8:
+- Cardinalities between Client and NotificationCreator
+
+Seminar 9:
+- Fraction <Type> is the better way to refer Fraction objects types
+- You should have tested the code with more integer types and values
+
+Seminar 10:
+- The correct way to complete the solution is to draw a class diagram with Model, View and Controller classes. 
+- View can include GUI components like textbox, lables, etc.  that you have marked in the in-class answer.
+- And the different signals and slots that you had written should be included into the three classes in teh diagram.
